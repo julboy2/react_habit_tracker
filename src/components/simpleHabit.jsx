@@ -1,4 +1,5 @@
 import React ,{ useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { useCallback } from 'react';
 
 const SimpleHabit = (props) => {
@@ -11,6 +12,8 @@ const SimpleHabit = (props) => {
         setCount( count + 1);
     });
         
+useEffect(()=>{},[count])
+
     return (
             <li className="habit">
                 <span ref={spanRef} className="habit-name">Reading</span>
